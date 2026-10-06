@@ -1,0 +1,27 @@
+---
+layout: default
+title: Writing
+---
+
+<div class="intro">
+  <h1>Oscar Oluoch</h1>
+  <p>Problem solver. Software craftsman. Writing about systems, software, research, and the craft of building things that work.</p>
+</div>
+
+<p class="section-label">Writing</p>
+
+<ul class="post-list">
+  {% for post in site.posts %}
+  <li class="post-list-item">
+    <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <div>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      {% if post.tags and post.tags.size > 0 %}
+      <div class="post-tags">
+        {% for tag in post.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ul>

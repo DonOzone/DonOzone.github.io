@@ -1,0 +1,35 @@
+title: Oscar Oluoch
+tagline: Problem solver. Software craftsman.
+description: Writing on software, systems, research, and the craft of building things that work.
+url: "https://donozone.github.io"
+author: Oscar Oluoch
+
+permalink: /writing/:year/:title/
+
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+kramdown:
+  syntax_highlighter: rouge
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .gitignore
